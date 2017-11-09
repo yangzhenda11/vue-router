@@ -2,7 +2,7 @@
 	<el-row class="container">
 		<el-col :span="24" class="header">
 			<el-col :span="20" class="logo">
-				<span>åŠ¨æ€è·¯ç”±{{nodes.length}}</span>
+				<span>Â·ÓÉÊıÁ¿{{nodes.length}}</span>
 			</el-col>
 		</el-col>
 
@@ -42,9 +42,9 @@ export default {
 		}
 	},
 	created() {
-		//è¿™é‡Œæ²¡æœ‰ç›´æ¥ä½¿ç”¨this.$router.options.routesï¼Œæ˜¯å› ä¸ºaddRouteçš„è·¯ç”±è§„åˆ™ï¼Œåœ¨è¿™é‡Œthis.$router.options.routesè·å–ä¸åˆ°
-		//æœ‰å…´è¶£çš„å¯ä»¥çœ‹ä¸€ä¸‹æºç ï¼Œæ˜¯ä¸ºä»€ä¹ˆè·å–ä¸åˆ°ï¼Œä½†æ˜¯å´åˆæœ‰è§„åˆ™äº† 
-		//å¦å¤–åœ¨å¼€å‘çš„æ—¶å€™ï¼Œå¯èƒ½ç”±äºæ˜¯çƒ­éƒ¨ç½²ï¼Œä¹Ÿä¼šä¸æ–­é‡å¤çš„ç»™nodesæ·»åŠ å…ƒç´ ï¼Œé€ æˆå¯¼èˆªæ¡æœ‰é‡å¤çš„ï¼Œç®€å•è§£å†³ï¼Œå¯ä»¥è®¾ç½®ä¸€ä¸ªå¼€å…³
+		//ÕâÀïÃ»ÓĞÖ±½ÓÊ¹ÓÃthis.$router.options.routes£¬ÊÇÒòÎªaddRouteµÄÂ·ÓÉ¹æÔò£¬ÔÚÕâÀïthis.$router.options.routes»ñÈ¡²»µ½
+		//ÓĞĞËÈ¤µÄ¿ÉÒÔ¿´Ò»ÏÂÔ´Âë£¬ÊÇÎªÊ²Ã´»ñÈ¡²»µ½£¬µ«ÊÇÈ´ÓÖÓĞ¹æÔòÁË
+		//ÁíÍâÔÚ¿ª·¢µÄÊ±ºò£¬¿ÉÄÜÓÉÓÚÊÇÈÈ²¿Êğ£¬Ò²»á²»¶ÏÖØ¸´µÄ¸ønodesÌí¼ÓÔªËØ£¬Ôì³Éµ¼º½ÌõÓĞÖØ¸´µÄ£¬¼òµ¥½â¾ö£¬¿ÉÒÔÉèÖÃÒ»¸ö¿ª¹Ø
 		let isLoadNodes = sessionStorage.getItem('isLoadNodes')
 		if (!isLoadNodes) {
 			let data = JSON.parse(window.sessionStorage.getItem('user'))

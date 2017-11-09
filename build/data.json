@@ -3,50 +3,68 @@
     {
       "path":"/menuOne",
       "component":"Home",
-      "name":"导航1",
+      "name":"设备管理",
       "iconCls":"el-icon-message",
       "leaf":false,
       "children":[
         {
           "path":"menuOneone",
           "component":"Main",
-          "name":"导航1--1级菜单1",
+          "name":"未销售设备",
           "leaf":false,
           "children":[
             {
               "path":"menuOneoneone",
               "component":"Main",
-              "name":"导航1--2级菜单1",
+              "name":"菜单1",
               "leaf":true
             },
             {
               "path":"menuOneonetwo",
               "component":"Main",
-              "name":"导航1--2级菜单2",
+              "name":"菜单2",
               "leaf":false,
               "children":[
                 {
                   "path":"menuOneonetwoone",
                   "component":"Main",
                   "leaf":true,
-                  "name":"导航1--3级菜单1"
+                  "name":"菜单2-菜单1"
                 },
                 {
                   "path":"menuOneonetwotwo",
                   "component":"Main",
                   "leaf":true,
-                  "name":"导航1--3级菜单2"
+                  "name":"菜单2-菜单2"
                 }
               ]
             }
           ]
+        },
+        {
+          "path":"menuOnetwo",
+          "component":"Main",
+          "leaf":true,
+          "name":"已销售设备"
+        },
+        {
+          "path":"menuOnethee",
+          "component":"Main",
+          "leaf":true,
+          "name":"设备列表"
+        },
+        {
+          "path":"menuOnefour",
+          "component":"Main",
+          "leaf":true,
+          "name":"设备监控"
         }
       ]
     },
     {
       "path":"/menuTwo",
       "component":"Home",
-      "name":"导航2",
+      "name":"配置管理",
       "iconCls":"el-icon-setting",
       "leaf":false,
       "children":[
@@ -54,21 +72,27 @@
           "path":"menuTwoone",
           "component":"Main",
           "leaf":true,
-          "name":"导航2--1级菜单1"
+          "name":"服务商配置"
         },
         {
           "path":"menuTwotwo",
           "component":"Main",
           "leaf":true,
           "hidden":true,
-          "name":"导航2--1级菜单2"
+          "name":"设备配置"
+        },
+        {
+          "path":"menuTwothree",
+          "component":"Main",
+          "leaf":true,
+          "name":"全局配置"
         }
       ]
     },
     {
       "path":"/menuThree",
       "component":"Home",
-      "name":"导航3",
+      "name":"小票管理",
       "iconCls":"el-icon-menu",
       "leaf":true
     }
