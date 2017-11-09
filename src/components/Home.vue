@@ -43,14 +43,18 @@ export default {
 	},
 	created() {
 		//这里没有直接使用this.$router.options.routes，是因为addRoute的路由规则，在这里this.$router.options.routes获取不到
-		//有兴趣的可以看一下源码，是为什么获取不到，但是却又有规则了
+		//有兴趣的可以看一下源码，是为什么获取不到，但是却又有规则了 
 		//另外在开发的时候，可能由于是热部署，也会不断重复的给nodes添加元素，造成导航条有重复的，简单解决，可以设置一个开关
-		let isLoadNodes = sessionStorage.getItem('isLoadNodes')
+		let isLoadNodes = sessionStorage.getItem('isLoadNodes');
+		let loadNodes = sessionStorage.setItem();
 		if (!isLoadNodes) {
 			let data = JSON.parse(window.sessionStorage.getItem('user'))
 			this.nodes.push(...data)
 			console.log(this.nodes)
-			sessionStorage.setItem('isLoadNodes', 'true')
+			sessionStorage.setItem('isLoadNodes', 'true');
+		} else {
+			console.$log(this.nodes);
+			sessionStorage.setItem('isLoadNodes', 'false');
 		}
 	},
 	methods: {
@@ -64,6 +68,8 @@ export default {
 			//console.log('handleclose');
 		},
 		handleselect: function(a, b) {
+			console.log(a);
+			console.log(b);
 		}
 	},
 	mounted() {
